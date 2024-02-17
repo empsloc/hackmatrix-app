@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="text-xl font-bold">Feweb</div>
             </div>
 
-            <div className="mr-20">
+            <div className="md:mr-20">
               Sint aliquip id commodo laborum ut irure ea aute excepteur. Eu
               consectetur sint ullamco duis ullamco anim tempor nostrud irure
               anim minim et consectetur. Ea id dolor nostrud deserunt et do
