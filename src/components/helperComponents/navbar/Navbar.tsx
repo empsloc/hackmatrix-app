@@ -17,7 +17,7 @@ const Navbar=()=>{
                         <Menu/>
                     </div>
                 </div>
-                <div className="col-span-1 hidden md:flex items-center gap-5 font-bold ">
+                <div className="col-span-1 hidden md:flex items-center gap-5 font-bold justify-end">
                 <div className="  flex justify-end items-center mr-3"><ThemeToggleButton/></div>
                     <div className="">Home</div>
                     <div className="">Communities</div>
