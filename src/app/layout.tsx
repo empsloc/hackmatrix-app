@@ -1,5 +1,7 @@
 import { ThemeProvider } from "@/components/ThemeComponents/ThemeProvider/theme-provider";
+import Footer from "@/components/helperComponents/footer/Footer";
 import Navbar from "@/components/helperComponents/navbar/Navbar";
+import { AuthProvider } from "@/providers/AuthProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -21,6 +23,7 @@ export default function RootLayout({
      
         
         <body className={inter.className}>
+          <AuthProvider>
         <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -29,7 +32,9 @@ export default function RootLayout({
           >
           <Navbar/>
           <main>{children}</main>
+          <Footer/>
           </ThemeProvider>
+          </AuthProvider>
         </body>
      
     </html>
