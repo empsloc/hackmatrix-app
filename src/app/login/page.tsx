@@ -1,12 +1,28 @@
 "use client"
 import MaxWidthWrapper from "@/components/helperComponents/MaxWidthWrapper/MaxWidthWrapper"
 import { signIn, useSession } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 const LoginPage=()=>{
 
     const {data,status} = useSession()
 
     console.log(data,status)
+    const router = useRouter()
+    if(status==="loading"){
+        return <MaxWidthWrapper>
+        <div className="mt-16 md:mt-0">
+            <div className="md:p-20 lg:p-40 p-7 flex items-center justify-center">
+                Loading
+            </div>
+
+        </div>
+    </MaxWidthWrapper>
+    }
+
+    if(status==="authenticated"){
+        router.push("/")
+    }
     return(
         <MaxWidthWrapper>
             <div className="mt-16 md:mt-0">
