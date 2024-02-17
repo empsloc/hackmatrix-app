@@ -1,8 +1,9 @@
+import MaxWidthWrapper from "@/components/helperComponents/MaxWidthWrapper/MaxWidthWrapper";
 
 export default function Home() {
   return (
-   <div className="">
-    asd
-   </div>
+   <MaxWidthWrapper>
+    <div className=""></div>
+   </MaxWidthWrapper>
   );
 }
